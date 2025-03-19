@@ -174,10 +174,10 @@
     "templates/itemsummary.css",
     "icon.css"
   ],
-  "id": "icon_data",
+  "id": "module_nexo",
   "authors": [
     {
-      "name": "Exocist",
+      "name": "VyCruel",
       "flags": {}
     }
   ],
