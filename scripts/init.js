@@ -828,7 +828,8 @@ class IconItemSheet extends SimpleItemSheet {
   }
   }
 
-Actors.registerSheet("icon-player-sheet", IconPlayerSheet, { makeDefault: false });
+Actors.registerSheet("Module-Nexo", IconPlayerSheet, { makeDefault: false });
 Actors.registerSheet("Module-Nexo", ICONSheet, { makeDefault: true });
-Actors.registerSheet("icon-camp-sheet", IconCampSheet, { makeDefault: false});
-Items.registerSheet("icon-item-sheet", IconItemSheet, { makeDefault: true });
+Actors.registerSheet("Module-Nexo", IconCampSheet, { makeDefault: false });
+Items.registerSheet("Module-Nexo", IconItemSheet, { makeDefault: true });
+
