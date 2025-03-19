@@ -400,7 +400,7 @@ class ICONSheet extends SimpleActorSheet {
         return cls.create({
 			name: game.i18n.localize("SIMPLE.ItemNew"), 
 			type: "item", 
-			flags: { ['Module_Nexo'] : { isTrait: true }} }, 
+			flags: { ['Module-Nexo'] : { isTrait: true }} }, 
 			{parent: this.actor});
       case "edit":
         return item.sheet.render(true);
@@ -424,7 +424,7 @@ class ICONSheet extends SimpleActorSheet {
         return cls.create({
 			name: game.i18n.localize("SIMPLE.ItemNew"), 
 			type: "item", 
-			flags: { ['Module_Nexo'] : { isBondPower: true }} }, 
+			flags: { ['Module-Nexo'] : { isBondPower: true }} }, 
 			{parent: this.actor});
       case "edit":
         return item.sheet.render(true);
@@ -448,7 +448,7 @@ class ICONSheet extends SimpleActorSheet {
         return cls.create({
 			name: game.i18n.localize("SIMPLE.ItemNew"), 
 			type: "item", 
-			flags: { ['Module_Nexo'] : { isRelic: true }} }, 
+			flags: { ['Module-Nexo'] : { isRelic: true }} }, 
 			{parent: this.actor});
       case "edit":
         return item.sheet.render(true);
@@ -472,7 +472,7 @@ class ICONSheet extends SimpleActorSheet {
         return cls.create({
 			name: game.i18n.localize("SIMPLE.ItemNew"), 
 			type: "item", 
-			flags: { ['Module_Nexo'] : { isTrophy: true }} }, 
+			flags: { ['Module-Nexo'] : { isTrophy: true }} }, 
 			{parent: this.actor});
       case "edit":
         return item.sheet.render(true);
@@ -496,7 +496,7 @@ class ICONSheet extends SimpleActorSheet {
         return cls.create({
 			name: game.i18n.localize("SIMPLE.ItemNew"), 
 			type: "item", 
-			flags: { ['Module_Nexo'] : { isCampFixture: true }} }, 
+			flags: { ['Module-Nexo'] : { isCampFixture: true }} }, 
 			{parent: this.actor});
       case "edit":
         return item.sheet.render(true);
@@ -525,7 +525,7 @@ class ICONSheet extends SimpleActorSheet {
     const checked = b.checked;
     const {type, id} = b.dataset;
     const item = this.object.items.get(id);
-    await item.setFlag("Module_Nexo", type, checked);
+    await item.setFlag("Module-Nexo", type, checked);
   });
 });
 }
@@ -760,7 +760,7 @@ class IconCampSheet extends IconPlayerSheet {
 	static get defaultOptions() {
     return foundry.utils.mergeObject(super.defaultOptions, {
       classes: ["IconCampSheet", "ICONSheet", "worldbuilding", "sheet", "actor"],
-      template: "modules/Module_Nexo/templates/icon-camp-sheet.html",
+      template: "modules/Module-Nexo/templates/icon-camp-sheet.html",
       width: 700,
       height: 700,
       tabs: [{navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "description"}],
@@ -829,6 +829,6 @@ class IconItemSheet extends SimpleItemSheet {
   }
 
 Actors.registerSheet("icon-player-sheet", IconPlayerSheet, { makeDefault: false });
-Actors.registerSheet("icon_data", ICONSheet, { makeDefault: true });
+Actors.registerSheet("Module-Nexo", ICONSheet, { makeDefault: true });
 Actors.registerSheet("icon-camp-sheet", IconCampSheet, { makeDefault: false});
 Items.registerSheet("icon-item-sheet", IconItemSheet, { makeDefault: true });
