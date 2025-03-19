@@ -181,9 +181,9 @@
       "flags": {}
     }
   ],
-  "url": "https://github.com/Exocist/ICON-1.45-WIP",
-  "manifest": "https://raw.githubusercontent.com/Exocist/ICON-1.45-WIP/main/module.json",
-  "download": "https://github.com/Exocist/ICON-1.45-WIP/archive/refs/heads/main.zip",
+  "url": "https://github.com/VyCruel98/Module-Nexo",
+  "manifest": "https://raw.githubusercontent.com/VyCruel98/Module-Nexo/main/module.json",
+  "download": "https://github.com/VyCruel98/Module-Nexo/archive/refs/heads/main.zip",
   "compatibility": {
     "minimum": "11",
     "verified": "11"
