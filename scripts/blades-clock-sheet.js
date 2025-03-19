@@ -11,7 +11,7 @@ export class BladesClockSheet extends BladesSheet {
 	static get defaultOptions() {
 	  return foundry.utils.mergeObject(super.defaultOptions, {
   	  classes: ["blades-in-the-dark", "sheet", "actor", "clock"],
-  	  template: "modules/Module_Nexo/templates/clock-sheet.html",
+  	  template: "modules/Module-Nexo/templates/clock-sheet.html",
       width: 420,
       height: 400,
     });
