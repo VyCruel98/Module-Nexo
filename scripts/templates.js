@@ -8,8 +8,8 @@ export const preloadHandlebarsTemplates = async function() {
   // Define template paths to load
   const templatePaths = [
     // Attribute list partial.
-    "modules/Module_Nexo/templates/parts/sheet-attributes.html",
-    "modules/Module_Nexo/templates/parts/sheet-groups.html",
+    "modules/Module-Nexo/templates/parts/sheet-attributes.html",
+    "modules/Module-Nexo/templates/parts/sheet-groups.html",
   ];
 
   // Load the template parts
