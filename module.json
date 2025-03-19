@@ -1,6 +1,6 @@
 {
-  "title": "Module Nexo",
-  "description": "Module Nexo created",
+  "title": "Module-Nexo",
+  "description": "Module Nexo created just now",
   "languages": [
     {
       "lang": "en",
@@ -174,7 +174,7 @@
     "templates/itemsummary.css",
     "icon.css"
   ],
-  "id": "module_nexo",
+  "id": "Module_Nexo",
   "authors": [
     {
       "name": "VyCruel",
@@ -188,5 +188,5 @@
     "minimum": "11",
     "verified": "11"
   },
-  "version": "1.7.19"
+  "version": "0.0.1"
 }
