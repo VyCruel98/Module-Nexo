@@ -1,0 +1,588 @@
+.worldbuilding .item-list .trait-controls {
+  flex: 0 0 2.556em;
+}
+
+.worldbuilding .narrative .skill-label {
+	display: flex;
+	margin-left: 0.5em;
+	flex-wrap: nowrap;
+	flex: 45%;
+}
+
+.worldbuilding .narrative .skill-ratings {
+    display: flex;
+    flex-wrap: nowrap;
+    flex: 10%;
+    justify-content: flex-start;
+}
+
+.worldbuilding * .character-burden-clock .blades-clock {
+	width: 6.248em;
+	height: 6.248em;
+	background-size: cover;
+}
+
+.worldbuilding * .character-burden-clock {
+	margin-top: 1.065em;
+	display: flex;
+}
+
+.worldbuilding input[type="radio"] {
+    position: relative;
+    top: 0.14px;
+    margin: 0 0 0 0.38em;
+}
+
+.worldbuilding * .character-burden-clock .blades-clock input#clock-4-1-gms_red {
+	left: 3.6em;
+	top: 1.55em;
+}
+
+.worldbuilding * .character-burden-clock .blades-clock input#clock-4-2-gms_red {
+	left: 2.1em;
+	top: 3.9em;
+}
+
+.worldbuilding * .character-burden-clock .blades-clock input#clock-4-3-gms_red {
+	left: -1.8em;
+	top: 3.9em;
+}
+
+.worldbuilding * .character-burden-clock .blades-clock input#clock-4-4-gms_red {
+	left: -3.4em;
+	top: 1.65em;
+}
+
+.worldbuilding * .character-burden-clock .blades-clock input#clock-6-1-gms_red {
+	left: 2.5em;
+	top: 1em;
+}
+
+.worldbuilding * .character-burden-clock .blades-clock input#clock-6-2-gms_red {
+	left: 2.4em;
+	top: 1.9em;
+}
+
+.worldbuilding * .character-burden-clock .blades-clock input#clock-6-3-gms_red {
+	left: 0.9em;
+	top: 3.7em;
+}
+
+.worldbuilding * .character-burden-clock .blades-clock input#clock-6-4-gms_red {
+	left: -2.2em;
+	top: 4.5em;
+}
+
+.worldbuilding * .character-burden-clock .blades-clock input#clock-6-5-gms_red {
+	left: 1em;
+	top: 2.5em;
+}
+
+.worldbuilding * .character-burden-clock .blades-clock input#clock-6-6-gms_red {
+	left: -0.6em;
+	top: 0.7em;
+}
+
+.worldbuilding * .character-burden-clock .blades-clock input#clock-8-1-gms_red {
+	left: 3.2em;
+	top: 1em;
+}
+
+.worldbuilding * .character-burden-clock .blades-clock input#clock-8-2-gms_red {
+	left: 2.6em;
+	top: 2.1em;
+}
+
+.worldbuilding * .character-burden-clock .blades-clock input#clock-8-3-gms_red {
+	left: 1em;
+	top: 3.5em;
+}
+
+.worldbuilding * .character-burden-clock .blades-clock input#clock-8-4-gms_red {
+	left: -1.5em;
+	top: 4.5em;
+}
+
+.worldbuilding * .character-burden-clock .blades-clock input#clock-8-5-gms_red {
+	left: 1.7em;
+	top: 3.3em;
+}
+
+.worldbuilding * .character-burden-clock .blades-clock input#clock-8-6-gms_red {
+	left: -0.7em;
+	top: 2.2em;
+}
+
+.worldbuilding * .character-burden-clock .blades-clock input#clock-8-7-gms_red {
+	left: -2.3em;
+	top: 0.9em;
+}
+
+.worldbuilding * .character-burden-clock .blades-clock input#clock-8-8-gms_red {
+	left: -2.95em;
+	top: -0.2em;
+}
+
+.worldbuilding * .character-burden-clock .blades-clock input#clock-4-1-wallflower_green {
+	left: 3.6em;
+	top: 1.55em;
+}
+
+.worldbuilding * .character-burden-clock .blades-clock input#clock-4-2-wallflower_green {
+	left: 2.1em;
+	top: 3.9em;
+}
+
+.worldbuilding * .character-burden-clock .blades-clock input#clock-4-3-wallflower_green {
+	left: -1.8em;
+	top: 3.9em;
+}
+
+.worldbuilding * .character-burden-clock .blades-clock input#clock-4-4-wallflower_green {
+	left: -3.4em;
+	top: 1.65em;
+}
+
+.worldbuilding * .character-burden-clock .blades-clock input#clock-6-1-wallflower_green {
+	left: 2.5em;
+	top: 1em;
+}
+
+.worldbuilding * .character-burden-clock .blades-clock input#clock-6-2-wallflower_green {
+	left: 2.4em;
+	top: 1.9em;
+}
+
+.worldbuilding * .character-burden-clock .blades-clock input#clock-6-3-wallflower_green {
+	left: 0.9em;
+	top: 3.7em;
+}
+
+.worldbuilding * .character-burden-clock .blades-clock input#clock-6-4-wallflower_green {
+	left: -2.2em;
+	top: 4.5em;
+}
+
+.worldbuilding * .character-burden-clock .blades-clock input#clock-6-5-wallflower_green {
+	left: 1em;
+	top: 2.5em;
+}
+
+.worldbuilding * .character-burden-clock .blades-clock input#clock-6-6-wallflower_green {
+	left: -0.6em;
+	top: 0.7em;
+}
+
+.worldbuilding * .character-burden-clock .blades-clock input#clock-10-1-wallflower_green {
+	left: 3.15em;
+	top: 0.8em;
+}
+
+.worldbuilding * .character-burden-clock .blades-clock input#clock-10-2-wallflower_green {
+	left: 2.6em;
+	top: 1.6em;
+}
+
+.worldbuilding * .character-burden-clock .blades-clock input#clock-10-3-wallflower_green {
+	left: 1.4em;
+	top: 2.8em;
+}
+
+.worldbuilding * .character-burden-clock .blades-clock input#clock-10-4-wallflower_green {
+	left: -0.5em;
+	top: 4.05em;
+}
+
+.worldbuilding * .character-burden-clock .blades-clock input#clock-10-5-wallflower_green {
+	left: 3.15em;
+	top: 3.5em;
+}
+
+.worldbuilding * .character-burden-clock .blades-clock input#clock-10-6-wallflower_green {
+	left: 0.3em;
+	top: 3.5em;
+}
+
+.worldbuilding * .character-burden-clock .blades-clock input#clock-10-7-wallflower_green {
+	left: -2.3em;
+	top: 2.8em;
+}
+
+.worldbuilding * .character-burden-clock .blades-clock input#clock-10-8-wallflower_green {
+	left: -4.2em;
+	top: 1.6em;
+}
+
+.worldbuilding * .character-burden-clock .blades-clock input#clock-10-9-wallflower_green {
+	left: 0.8em;
+	top: -0.9em;
+}
+
+.worldbuilding * .character-burden-clock .blades-clock input#clock-10-10-wallflower_green {
+	left: 0.3em;
+	top: -1.65em;
+}
+
+.worldbuilding * .character-burden-clock .blades-clock input[value="0"] {
+  display: none;
+  position: absolute;
+}
+
+.worldbuilding .narrative-grid .XP-and-Dust {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	margin-left: 3em;
+}
+
+.worldbuilding .narrative-grid .XP-value {
+	width: 6.035em;
+}
+
+section.XPDust {
+	grid-column: 1;
+	grid-row: 1;
+	margin-left: 10.65em;
+}
+
+label[for=attributes-XP-0] {
+	display: block;
+	width: 5.68em;
+}
+
+.worldbuilding .narrative-grid .Dust-value {
+	width: 4.97em;
+	margin-top: 1em;
+}
+
+label[for=attributes-Dust-0] {
+	display: block;
+	width: 5.68em;
+}
+
+.worldbuilding .narrative-grid i#attributes-XP-7 {
+	color: purple;
+}
+
+.worldbuilding .narrative-grid i#attributes-XP-15 {
+	color: purple;
+}
+
+.bond-info textarea {
+	height: 10.65em;
+}
+
+.bond-info .Second-Wind textarea {
+	height: 5em;
+}
+
+.bond-info .Special-Ability textarea {
+	height: 9em;
+}
+
+.bond-info .Ideals textarea {
+	height: 7.8em;
+}
+
+h4.item-name {
+	flex: 50%;
+}
+
+.worldbuilding .icon-header-grid {
+    overflow: hidden;
+    display: inline-grid;
+    column-gap: 0.71em;
+    grid-template-columns: 3.55em 8.52em 8.52em 8.52em 8.52em 852em;
+    grid-template-rows: 4.26em 4.97em;
+    flex: 0 0 9.23em;
+}
+
+.worldbuilding .narrative-grid {
+	overflow: hidden;
+	display: inline-grid;
+	grid-template-columns: 23.075em 24.495em;
+	column-gap: 1.42em;
+	grid-template-rows: auto auto auto auto;
+}
+
+.burden-names {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.burden-names textarea {
+	flex: 0.25;
+	height: 2.13em;
+	min-height: 2.13em;
+}
+
+.ambition-names {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.ambition-names textarea {
+	flex: 0.25;
+	height: 3.55em;
+}
+
+.group-ambitions textarea {
+	flex: 0.25;
+	height: 5.2em;
+}
+
+
+.worldbuilding .skills {
+	width: 10.65em;
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    flex-direction: row;
+	
+}
+
+section.skills {
+	grid-column: 1;
+	grid-row: 1;
+}
+
+section.burdens {
+	grid-column: 1;
+	grid-row: 2;
+}
+
+section.ambitions {
+	grid-column: 1;
+	grid-row: 3;
+}
+
+section.bond {
+	grid-column: 2;
+	grid-row: 1 / 4;
+}
+
+.section .ambitions
+
+.icon-header-grid-item-1 {
+	grid-column: 1 / 1;
+	grid-row: 1 / 1;
+}
+
+.icon-header-grid-item-2 {
+	grid-column: 2 / span 3;
+	grid-row: 1 / 1;
+}
+
+.icon-header-grid-item-3 {
+	grid-column: 5 / 5;
+	grid-row: 1 / 2;
+	width: 7.81em;
+}
+
+.icon-header-grid-item-4 {
+	grid-column: 6 / 6;
+	grid-row: 1 / 2;
+	width: 7.81em;
+}
+
+.icon-header-grid-item-5 {
+	grid-column: 1 / span 4;
+	grid-row: 2 / 2;
+}
+
+.worldbuilding .icon-resource {
+  width: 25%;
+  height: 2.84em;
+  margin-top: 0.71em;
+  float: left;
+  text-align: center;
+}
+.worldbuilding .icon-resource input {
+  width: 1.988em;
+  height: 1.988em;
+}
+.worldbuilding .resource-label {
+	display:flex;
+	flex-flow:row;
+	vertical-align: top;
+	flex: 1 100%;
+	justify-content: center;
+}
+
+.worldbuilding .icon-sheet-header .profile-img {
+  flex: 0 0 7.1em;
+  height: 3.55em;
+  width: 3.55em;
+  margin-right: 0.71em;
+}
+.worldbuilding .icon-sheet-header .header-fields {
+  flex: 1;
+  height: 3.55em;
+}
+.worldbuilding .icon-sheet-header h1.charname {
+  height: 3.55em;
+  padding: 0px;
+  margin: 0.355em 0;
+  border-bottom: 0;
+}
+.worldbuilding .icon-sheet-header h1.charname input {
+  width: 100%;
+  height: 50%;
+  margin: 0;
+}
+
+
+.chat-label {
+  background-color: #191813;
+  font-family: Kirsty, serif;
+  color: #EEEFFF;
+  font-size: 21px;
+  text-align: center;
+  padding: 0px 5px;
+  height: 3px !important;
+  text-transform: capitalize;
+}
+
+.chat-label-small {
+  background-color: #999;
+  color: #191813;
+  font-size: small;
+  text-align: center;
+  padding: 3px 5px;
+  height: 20px !important;
+}
+
+.label-stripe-chat {
+  text-transform: uppercase;
+  background-color: #191813;
+  color: #EEEFFF;
+  margin-bottom: 1px;
+  position: relative;
+  padding-top: 3px;
+  display: flex;
+  font-weight: bold;
+  margin: 0;
+}
+
+.label-stripe-chat-small {
+  text-transform: capitalize;
+  background-color: #999;
+  color: #191813;
+  margin-bottom: 1px;
+  position: relative;
+  padding-top: 3px;
+  display: flex;
+  font-weight: bold;
+}
+
+.blades-die-tooltip .die {
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: large;
+}
+.blades-die-tooltip .die.critical-success {
+  color: #12a012;
+}
+.blades-die-tooltip .die.success {
+  color: #008000;
+}
+.blades-die-tooltip .die.partial-success {
+  color: #04578f;
+}
+.blades-die-tooltip .die.failure {
+  color: red;
+}
+
+.requestor.chat-card .card-header img {
+  margin-right: 5px;
+  flex: 0;
+  height: 24px;
+  width: 24px;
+  border: none;
+}
+
+.worldbuilding .editor, .worldbuilding .editor-content {
+	height: auto;
+	min-height: 3em;
+}
+
+.prosemirror .editor-container .editor-content {
+	height: fit-content;
+	position: relative;
+}
+
+.item-buttons input[type="checkbox"] {
+	flex: 0 0 1.4em;
+	width: 1.4em;
+	height: 1.1em;
+	margin: 0.2em 0.3em;
+}
+
+.worldbuilding .item-list .item-buttons {
+	justify-content: flex-end;
+	margin-right: 2em;
+}
+
+.worldbuilding .camp-fixtures h4.item-name {
+	flex: 20%;
+}
+
+.worldbuilding .bond-powers h4.item-name {
+	flex: 40%;
+}
+
+.worldbuilding .items h4.item-name {
+	flex: 50%;
+}
+
+.worldbuilding .traits h4.item-name {
+	flex: 50%;
+}
+
+.CombatBar {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.worldbuilding .Wounds i#attributes-Wounds-4 {
+	color: red;
+}	
+	
+.gear .AdventurerKit textarea {
+    height: 9em;
+}
+
+.gear .OtherKit textarea {
+    height: 9em;
+}
+
+.gear .LooseGear textarea {
+    height: 8em;
+}
+
+.Trophies .traitheader span {
+    display: flex;
+    justify-content: center;
+}
+
+.relics .traitheader span {
+    display: flex;
+    justify-content: center;
+}
+
+.abilities .traitheader span {
+    display: flex;
+    justify-content: center;
+}
+
+.traits .traitheader span {
+    display: flex;
+    justify-content: center;
+}
+
+.traitheader {
+    background-color: #bbbbbb;
+}
+
+}

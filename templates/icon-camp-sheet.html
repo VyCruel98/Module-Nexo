@@ -1,0 +1,146 @@
+<form class="flexcol {{cssClass}}" autocomplete="off">
+
+    {{!-- Sheet Header --}}
+    <header class="icon-sheet-header icon-header-grid">
+        <img class="profile-img icon-header-grid-item-1" src="{{data.img}}" data-edit="img" title="{{data.name}}" height="100" width="100" />
+        <div class="header-fields flex-group-center icon-header-grid-item-2">
+            <h1 class="charname">
+                <input name="name" type="text" value="{{data.name}}" placeholder="Name" />
+            </h1>
+		</div>
+		<div class="icon-resource-inputs icon-header-grid-item-5">
+            <div class="icon-resource">
+				<label for="data.effort.value" class="resource-label">Remaining Camps</label>
+                <input type="number" name="system.effort.value" value="{{systemData.effort.value}}"/>
+                <span> / </span>
+                <input type="number" name="system.effort.max" value="{{systemData.effort.max}}"/>
+            </div>
+            <div class="icon-resource">
+				<label for="data.power.value" class="resource-label">Group Dust</label>
+                <input type="number" name="system.power.value" value="{{systemData.power.value}}"/>
+				<span> / <span>
+				<input type="number" name="system.power.max" value="{{systemData.power.max}}"/>
+            </div>
+		</div>
+    </header>
+
+    {{!-- Sheet Body --}}
+    <section class="sheet-body">
+
+		{{!-- Narrative Tab --}}
+        <div class="tab narrative active">
+		<div class="narrative-grid">
+		<section class="group-ambitions">
+		<div class="character-burden-clock">
+		{{{blades-clock "system.attributes.clocks.Ambition4.value" 4 this.actor.system.attributes.clocks.Ambition4.value this.data._id "wallflower_green"}}}
+		</div>
+		
+		<textarea rows="4" cols="30" name="system.attributes.clocks.Ambition4Name.value" value="{{data.system.attributes.clocks.Ambition4Name.value}}">{{data.system.attributes.clocks.Ambition4Name.value}}</textarea>
+		
+		<BR>
+		<div class="character-burden-clock">
+		{{{blades-clock "system.attributes.clocks.Ambition6.value" 6 this.actor.system.attributes.clocks.Ambition6.value this.data._id "wallflower_green"}}}
+		</div>
+		
+		<textarea rows="4" cols="30" name="system.attributes.clocks.Ambition6Name.value" value="{{data.system.attributes.clocks.Ambition6Name.value}}"/>{{data.system.attributes.clocks.Ambition6Name.value}}</textarea>
+		
+		<BR>
+		<div class="character-burden-clock">
+		{{{blades-clock "system.attributes.clocks.Ambition10.value" 10 this.actor.system.attributes.clocks.Ambition10.value this.data._id "wallflower_green"}}}
+		</div>
+		
+		<textarea rows="4" cols="30" name="system.attributes.clocks.Ambition10Name.value" value="{{data.system.attributes.clocks.Ambition10Name.value}}"/>{{data.system.attributes.clocks.Ambition10Name.value}}</textarea>
+		
+		</section>
+		<section class="bond">
+		<div class="tab camp-fixtures active">
+		<b>Camp Fixtures</b>
+		<ol class="item-list">
+                {{#each data.items as |item id|}}
+				{{#if item.isCampFixture }}
+                <li class="item flexrow" data-item-id="{{item._id}}">
+                    <img src="{{item.img}}" title="{{item.name}}" width="24" height="24" />
+                    <h4 class="item-name">{{item.name}}</h4>
+                    {{!-- Iterate through all attributes on the item and output buttons for any that are formula. --}}
+                    <div class="item-buttons">
+                        {{#each item.system.attributes as |itemAttr key|}}
+                        {{#if itemAttr.dtype}}
+                            {{#if itemAttr.isFormula}}
+                                {{!-- Use the items.name.key format for shorthand. --}}
+                                {{#if ../../shorthand}}
+                                <button class="item-button rollable" data-roll="@items.{{slugify item.name}}.{{key}}" data-label="{{ itemAttr.label }}"
+                                    title="{{itemAttr.value}}">{{itemAttr.label}}</button>
+                                {{!-- Use the items.name.attributes.key.value format otherwise. --}}
+                                {{else}}
+                                <button class="item-button rollable"
+                                    data-roll="@items.{{slugify item.name}}.attributes.{{key}}.value" data-label="{{ itemAttr.label }}"
+                                    title="{{itemAttr.value}}">{{itemAttr.label}}</button>
+                                {{/if}}
+                            {{/if}}
+                        {{else}}
+                            {{#each itemAttr as |itemGroupedAttr groupedKey|}}
+                                {{#if itemGroupedAttr.isFormula}}
+                                    {{!-- Use the items.name.key format for shorthand. --}}
+                                    {{#if ../../../shorthand}}
+                                    <button class="item-button rollable" data-roll="@items.{{slugify item.name}}.{{key}}.{{groupedKey}}" data-label="{{ itemGroupedAttr.label }}"
+                                        title="{{itemGroupedAttr.value}}">{{itemGroupedAttr.label}}</button>
+                                    {{!-- Use the items.name.attributes.key.value format otherwise. --}}
+                                    {{else}}
+                                    <button class="item-button rollable"
+                                        data-roll="@items.{{slugify item.name}}.attributes.{{key}}.{{groupedKey}}.value" data-label="{{ itemGroupedAttr.label }}"
+                                        title="{{itemGroupedAttr.value}}">{{itemGroupedAttr.label}}</button>
+                                    {{/if}}
+                                {{/if}}
+                            {{/each}}
+                        {{/if}}
+                        {{/each}}
+					{{#each item.Talents}}
+						<label>
+						<input type="checkbox" data-id="{{item._id}}" class="talent-checkbox" data-type="{{this.name}}" {{checked this.value }}>
+						</label><br>
+					{{/each}}
+                    </div>
+                    <div class="camp-fixture-controls">
+                        <a class="camp-fixture-control" title="{{ localize "SIMPLE.ItemEdit" }}" data-action="edit"><i class="fas fa-edit"></i></a>
+                        <a class="camp-fixture-control" title="{{ localize "SIMPLE.ItemDelete" }}" data-action="delete"><i class="fas fa-trash"></i></a>
+                    </div>
+                </li>
+                {{/if}}
+				{{/each}}
+            </ol>
+            <p>
+                <a class="camp-fixture-control" title="{{ localize "SIMPLE.ItemCreate" }}" data-action="create"><i class="fas fa-plus"></i> {{ localize "SIMPLE.ItemCreate" }}</a>
+            </p>
+		
+		
+		</div>
+		</section>
+		</section>
+		</div>
+        </div>
+		
+        {{!-- Attributes Tab --}}
+        <div class="tab attributes" data-group="primary" data-tab="attributes">
+            <header class="attributes-header flexrow">
+                <span class="attribute-key">{{localize "SIMPLE.AttributeKey"}}</span>
+                <span class="attribute-value">{{localize "SIMPLE.AttributeValue"}}</span>
+                <span class="attribute-label">{{localize "SIMPLE.AttributeLabel"}}</span>
+                <span class="attribute-dtype">{{localize "SIMPLE.AttributeDtype"}}</span>
+                <a class="attribute-control" data-action="create" data-group="{{group}}"><i class="fas fa-plus"></i></a>
+            </header>
+
+            {{!-- Render the attribute list partial. --}}
+            {{> "modules/icon_data/templates/parts/icon-sheet-attributes.html" attributes=systemData.ungroupedAttributes dtypes=dtypes}}
+
+            {{!-- Render the grouped attributes partial and control. --}}
+            <div class="groups">
+                {{> "modules/icon_data/templates/parts/icon-sheet-groups.html" attributes=systemData.groupedAttributes groups=systemData.groups dtypes=dtypes}}
+
+                <div class="group-controls flexrow">
+                    <input class="group-prefix" type="text" value=""/>
+                    <a class="button group-control" data-action="create-group"><i class="fas fa-plus"></i>Add Attribute Group</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</form>
