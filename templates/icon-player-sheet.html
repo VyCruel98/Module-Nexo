@@ -538,11 +538,11 @@
             </header>
 
             {{!-- Render the attribute list partial. --}}
-            {{> "modules/Module_Nexo/templates/parts/icon-sheet-attributes.html" attributes=systemData.ungroupedAttributes dtypes=dtypes}}
+            {{> "modules/Module-Nexo/templates/parts/icon-sheet-attributes.html" attributes=systemData.ungroupedAttributes dtypes=dtypes}}
 
             {{!-- Render the grouped attributes partial and control. --}}
             <div class="groups">
-                {{> "modules/Module_Nexo/templates/parts/icon-sheet-groups.html" attributes=systemData.groupedAttributes groups=systemData.groups dtypes=dtypes}}
+                {{> "modules/Module-Nexo/templates/parts/icon-sheet-groups.html" attributes=systemData.groupedAttributes groups=systemData.groups dtypes=dtypes}}
 
                 <div class="group-controls flexrow">
                     <input class="group-prefix" type="text" value=""/>
