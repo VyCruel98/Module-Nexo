@@ -34,7 +34,7 @@ export class BladesClockSheet extends BladesSheet {
 
   /** @override */
   async _updateObject(event, formData) {
-    let image_path = `modules/icon-145-data-wip/themes/gms-red/${formData['system.type']}clock_${formData['system.value']}.png`;
+    let image_path = `modules/Module-Nexo/themes/gms-red/${formData['system.type']}clock_${formData['system.value']}.png`;
     formData['img'] = image_path;
     formData['prototypeToken.texture.src'] = image_path;
     let data = [];
