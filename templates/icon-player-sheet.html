@@ -10,7 +10,7 @@
 		</div>
 		<div class="narrative-information icon-header-grid-item-3">
             <span>Nacionalidad: </span>
-			<input type="text" name="system.attributes.information.Nationality.value" placeholder="Arken" value="{{data.system.attributes.information.Nationality.value}}"/>
+			<input type="text" name="system.attributes.information.Nationality.value" placeholder="Nacionalidad" value="{{data.system.attributes.information.Nationality.value}}"/>
 			<span>{{localize "ICON.Culture"}}: </span>
 			<input type="text" name="system.attributes.information.culture.value" placeholder="Arken" value="{{data.system.attributes.information.culture.value}}"/>
 			<span>{{localize "ICON.Bond"}}: </span>
@@ -26,7 +26,7 @@
 		</div>
 		<div class="icon-resource-inputs icon-header-grid-item-5">
             <div class="icon-resource">
-				<label for="data.health.value" class="resource-label">{{localize "ICON.Health"}}</label>
+				<label for="data.health.value" class="resource-label">Salud</label>
                 <input type="number" name="system.health.value" value="{{systemData.health.value}}"/>
                 <span> / </span>
                 <input type="number" name="system.health.max" value="{{systemData.health.max}}"/>
@@ -38,16 +38,16 @@
                 <input type="number" name="system.power.max" value="{{systemData.power.max}}"/>
             </div>
 			<div class="icon-resource">
-				<label for="data.strain.value" class="resource-label">{{localize "ICON.Strain"}}</label>
-                <input type="number" name="system.strain.value" value="{{systemData.strain.value}}"/>
+				<label for="data.strain.value" class="resource-label">Estres</label>
+                <input type="number" name="system.strain.value" value="{{systemData.stress.value}}"/>
                 <span> / </span>
-                <input type="number" name="system.strain.max" value="{{systemData.strain.max}}"/>
+                <input type="number" name="system.strain.max" value="{{systemData.stress.max}}"/>
             </div>
             <div class="icon-resource">
-				<label for="data.effort.value" class="resource-label">{{localize "ICON.Effort"}}</label>
-                <input type="number" name="system.effort.value" value="{{systemData.effort.value}}"/>
+				<label for="data.effort.value" class="resource-label">Resolución</label>
+                <input type="number" name="system.effort.value" value="{{systemData.resolution.value}}"/>
                 <span> / </span>
-                <input type="number" name="system.effort.max" value="{{systemData.effort.max}}"/>
+                <input type="number" name="system.effort.max" value="{{systemData.resolution.max}}"/>
             </div>
 		</div>
     </header>
