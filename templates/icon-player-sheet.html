@@ -379,32 +379,19 @@
         {{!-- Abilities & Trophies Tab --}}
         <div class="tab items" data-group="primary" data-tab="items">
 		<div class="CombatBar">
-		<div class="Personal Resolve">
-		<span>Personal Resolve</span>
-		{{#times_from_0 5}}
-		<i class="{{#if (eq this 0)}}
-		fab fa-creative-commons-zero
-		{{else if (gte ../actor.system.attributes.information.PersonalResolve.value this)}}
-		fas fa-circle
-		{{else}}
-		fas fa-circle-dashed
-		{{/if}} click-to-set PersonalResolve-value-{{this}}" data-value="{{this}}" data-stat="system.attributes.information.PersonalResolve.value" id="attributes-PersonalResolve-{{this}}"></i>
-		<label for="attributes-PersonalResolve-{{this}}"></label>
-		{{/times_from_0}}
-		</div>
-		<div class="Wounds">
-		<span>Wounds</span>
-		{{#times_from_0 4}}
-		<i class="{{#if (eq this 0)}}
-		fab fa-creative-commons-zero
-		{{else if (gte ../actor.system.attributes.information.Wounds.value this)}}
-		fas fa-circle
-		{{else}}
-		fas fa-circle-dashed
-		{{/if}} click-to-set Wounds-value-{{this}}" data-value="{{this}}" data-stat="system.attributes.information.Wounds.value" id="attributes-Wounds-{{this}}"></i>
-		<label for="attributes-Wounds-{{this}}"></label>
-		{{/times_from_0}}
-		</div>
+            <div class="icon-resource">
+            <div class="icon-resource">
+				<label for="data.health.value" class="resource-label">Ether Menor</label>
+                <input type="number" name="system.health.value" value="{{systemData.health.value}}"/>
+                <span> / </span>
+                <input type="number" name="system.health.max" value="{{systemData.health.max}}"/>
+            </div>
+            <div class="icon-resource">
+				<label for="data.power.value" class="resource-label">Ether Mayor</label>
+                <input type="number" name="system.power.value" value="{{systemData.power.value}}"/>
+                <span> / </span>
+                <input type="number" name="system.power.max" value="{{systemData.power.max}}"/>
+            </div>
 		</div>
 		<div class="abilities">
 		<div class="traitheader">
