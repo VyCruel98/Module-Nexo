@@ -543,6 +543,7 @@ section.bond {
 .CombatBar {
 	display: flex;
 	justify-content: space-evenly;
+	padding-bottom: 15px;
 }
 
 .worldbuilding .Wounds i#attributes-Wounds-4 {
