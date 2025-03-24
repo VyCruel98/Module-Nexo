@@ -249,9 +249,15 @@
 		{{!-- Traits & Relics Tab --}}
         <div class="tab traits" data-group="primary" data-tab="traits">
 				<div class="main-mechanics">
-		<span>Mecanica principal</span>
+<h1 style="text-align: center; width: 100%;">Mecanica principal</h1>
 		<textarea rows="10" cols="30" name="system.attributes.information.MainMechanics.value" value="{{data.system.attributes.information.MainMechanics.value}}">{{data.system.attributes.information.MainMechanics.value}}</textarea>
 		</div>
+		            <div class="icon-resource">
+				<label for="data.MinorEther.value" class="resource-label">Ether Menor</label>
+                <input type="number" name="system.MinorEther.value" value="{{systemData.MinorEther.value}}"/>
+                <span> / </span>
+                <input type="number" name="system.MinorEther.max" value="{{systemData.MinorEther.max}}"/>
+            </div>
 		<div class="traitsrelics">
 		<div class="traitheader">
 		<span>Traits</span>
