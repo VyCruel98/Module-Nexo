@@ -66,184 +66,114 @@
 
 		{{!-- Narrative Tab --}}
         <div class="tab narrative" data-group="primary" data-tab="narrative">
-		<div class="narrative-grid">
-		<section class="skills">
-        {{#if actor.system.attributes.skills }}
-		{{#each actor.system.attributes.skills as |skill skill_name|}}
-		{{#times_from_0 4}}
-		<i class="{{#if (eq this 0)}}
-		fab fa-creative-commons-zero
-		{{else if (gte skill.value this)}}
-		fas fa-circle
-		{{else}}
-		fas fa-circle-dashed
-		{{/if}} click-to-set skill-ratings skill-value-{{this}}" data-value="{{this}}" data-stat="system.attributes.skills.{{skill_name}}.value" id="attributes-{{../../actor._id}}-{{skill_name}}-{{this}}"></i>
-		<label for="attributes-{{../../actor._id}}-{{skill_name}}-{{this}}"></label>
-		{{/times_from_0}}
-		<div class="skill-label roll-die-attribute rollable-text" data-roll-attribute="{{skill_name}}">{{localize skill.label}}</div>
-		{{/each}}
-		{{/if}}
-		</section>
-		<section class="XPDust">
-		<div class="XP-and-Dust">
-		<div class="XP-value">
-		<span>{{localize "ICON.XP"}}</span>
-		{{#times_from_0 15}}
-		<i class="{{#if (eq this 0)}}
-		fab fa-creative-commons-zero
-		{{else if (gte ../actor.system.attributes.information.XP.value this)}}
-		fas fa-circle
-		{{else}}
-		fas fa-circle-dashed
-		{{/if}} click-to-set XP-value-{{this}}" data-value="{{this}}" data-stat="system.attributes.information.XP.value" id="attributes-XP-{{this}}"></i>
-		<label for="attributes-XP-{{this}}"></label>
-		{{/times_from_0}}
-		</div>
-		<div class="Dust-value">
-		<span>{{localize "ICON.Dust"}}</span>
-		{{#times_from_0 8}}
-		<i class="{{#if (eq this 0)}}
-		fab fa-creative-commons-zero
-		{{else if (gte ../actor.system.attributes.information.Dust.value this)}}
-		fas fa-circle
-		{{else}}
-		fas fa-circle-dashed
-		{{/if}} click-to-set Dust-value-{{this}}" data-value="{{this}}" data-stat="system.attributes.information.Dust.value" id="attributes-Dust-{{this}}"></i>
-		<label for="attributes-Dust-{{this}}"></label>
-		{{/times_from_0}}
-		</div>
-		</div>
-		</section>
-		<section class="burdens">
-		<div class="character-burden-clock">
-		{{{blades-clock "system.attributes.clocks.Burden4.value" 4 this.actor.system.attributes.clocks.Burden4.value this.data._id "gms_red"}}}
-		{{{blades-clock "system.attributes.clocks.Burden6.value" 6 this.actor.system.attributes.clocks.Burden6.value this.data._id "gms_red"}}}
-		{{{blades-clock "system.attributes.clocks.Burden8.value" 8 this.actor.system.attributes.clocks.Burden8.value this.data._id "gms_red"}}}
-		</div>
-		<div class="burden-names">
-		<textarea rows="10" cols="30" name="system.attributes.clocks.Burden4Name.value" value="{{data.system.attributes.clocks.Burden4Name.value}}"/>{{data.system.attributes.clocks.Burden4Name.value}}</textarea>
-		<textarea rows="10" cols="30" name="system.attributes.clocks.Burden6Name.value" value="{{data.system.attributes.clocks.Burden6Name.value}}"/>{{data.system.attributes.clocks.Burden6Name.value}}</textarea>
-		<textarea rows="10" cols="30" name="system.attributes.clocks.Burden8Name.value" value="{{data.system.attributes.clocks.Burden8Name.value}}"/>{{data.system.attributes.clocks.Burden8Name.value}}</textarea>
-		</div>
-		</section>
-		<section class="ambitions">
-		<div class="character-burden-clock">
-		{{{blades-clock "system.attributes.clocks.Ambition4.value" 4 this.actor.system.attributes.clocks.Ambition4.value this.data._id "wallflower_green"}}}
-		{{{blades-clock "system.attributes.clocks.Ambition6.value" 6 this.actor.system.attributes.clocks.Ambition6.value this.data._id "wallflower_green"}}}
-		{{{blades-clock "system.attributes.clocks.Ambition10.value" 10 this.actor.system.attributes.clocks.Ambition10.value this.data._id "wallflower_green"}}}
-		</div>
-		<div class="ambition-names">
-		<textarea rows="10" cols="30" name="system.attributes.clocks.Ambition4Name.value" value="{{data.system.attributes.clocks.Ambition4Name.value}}">{{data.system.attributes.clocks.Ambition4Name.value}}</textarea>
-		<textarea rows="10" cols="30" name="system.attributes.clocks.Ambition6Name.value" value="{{data.system.attributes.clocks.Ambition6Name.value}}"/>{{data.system.attributes.clocks.Ambition6Name.value}}</textarea>
-		<textarea rows="10" cols="30" name="system.attributes.clocks.Ambition10Name.value" value="{{data.system.attributes.clocks.Ambition10Name.value}}"/>{{data.system.attributes.clocks.Ambition10Name.value}}</textarea>
-		</div>
-		</section>
-		<section class="bond">
-		<nav class="bond-tabs tabs" data-group="bond">
-			<a class="item" data-tab="bond-info" data-group="bond">{{localize "ICON.NarrativeInfo"}}</a>
-			<a class="item" data-tab="gear" data-group="bond">Gear</a>
-			<a class="item" data-tab="bond-powers" data-group="bond">{{localize "ICON.BondPowers"}}</a>
-		</nav>
-		<section class="bond-body">
-		<div class="tab bond-info active" data-group="bond" data-tab="bond-info">
-		<div class="Second-Wind">
-		<span>{{localize "ICON.SecondWind"}}</span>
-		<textarea rows="10" cols="30" name="system.attributes.information.SecondWind.value" value="{{data.system.attributes.information.SecondWind.value}}">{{data.system.attributes.information.SecondWind.value}}</textarea>
-		</div>
-		<div class="Special-Ability">
-		<span>{{localize "ICON.SpecialAbility"}}</span>
-		<textarea rows="10" cols="30" name="system.attributes.information.SpecialAbility.value" value="{{data.system.attributes.information.SpecialAbility.value}}">{{data.system.attributes.information.SpecialAbility.value}}</textarea>
-		</div>
-		<div class="Ideals">
-		<span>{{localize "ICON.Ideals"}}</span>
-		<textarea rows="10" cols="30" name="system.attributes.information.Ideals.value" value="{{data.system.attributes.information.Ideals.value}}">{{data.system.attributes.information.Ideals.value}}</textarea>
-		</div>
-		</div>
-		
-		<div class="tab gear" data-group="bond" data-tab="gear">
-		
-		
-		
-		<div class="AdventurerKit">
-		<span>Adventurer's Kit</span>
-		<textarea rows="10" cols="30" name="system.attributes.information.AdventurersKit.value" value="{{data.system.attributes.information.AdventurersKit.value}}">{{data.system.attributes.information.AdventurersKit.value}}</textarea>
-		</div>
-		<div class="OtherKit">
-		<span>Other Kit</span>
-		<textarea rows="10" cols="30" name="system.attributes.information.OtherKit.value" value="{{data.system.attributes.information.OtherKit.value}}">{{data.system.attributes.information.OtherKit.value}}</textarea>
-		</div>
-		<div class="LooseGear">
-		<span>Loose Gear</span>
-		<textarea rows="10" cols="30" name="system.attributes.information.LooseGear.value" value="{{data.system.attributes.information.LooseGear.value}}">{{data.system.attributes.information.LooseGear.value}}</textarea>
-		</div>
-		
-		</div>
-		
-		<div class="tab bond-powers" data-group="bond" data-tab="bond-powers">
-		
-		
-		<ol class="item-list">
-                {{#each data.items as |item id|}}
-				{{#if item.isBondPower }}
-                <li class="item flexrow" data-item-id="{{item._id}}">
-                    <img src="{{item.img}}" title="{{item.name}}" width="24" height="24" />
-                    <h4 class="item-name">{{item.name}}</h4>
-                    {{!-- Iterate through all attributes on the item and output buttons for any that are formula. --}}
-                    <div class="item-buttons">
-                        {{#each item.system.attributes as |itemAttr key|}}
-                        {{#if itemAttr.dtype}}
-                            {{#if itemAttr.isFormula}}
-                                {{!-- Use the items.name.key format for shorthand. --}}
-                                {{#if ../../shorthand}}
-                                <button class="item-button rollable" data-roll="@items.{{slugify item.name}}.{{key}}" data-label="{{ itemAttr.label }}"
-                                    title="{{itemAttr.value}}">{{itemAttr.label}}</button>
-                                {{!-- Use the items.name.attributes.key.value format otherwise. --}}
-                                {{else}}
-                                <button class="item-button rollable"
-                                    data-roll="@items.{{slugify item.name}}.attributes.{{key}}.value" data-label="{{ itemAttr.label }}"
-                                    title="{{itemAttr.value}}">{{itemAttr.label}}</button>
-                                {{/if}}
-                            {{/if}}
-                        {{else}}
-                            {{#each itemAttr as |itemGroupedAttr groupedKey|}}
-                                {{#if itemGroupedAttr.isFormula}}
-                                    {{!-- Use the items.name.key format for shorthand. --}}
-                                    {{#if ../../../shorthand}}
-                                    <button class="item-button rollable" data-roll="@items.{{slugify item.name}}.{{key}}.{{groupedKey}}" data-label="{{ itemGroupedAttr.label }}"
-                                        title="{{itemGroupedAttr.value}}">{{itemGroupedAttr.label}}</button>
-                                    {{!-- Use the items.name.attributes.key.value format otherwise. --}}
-                                    {{else}}
-                                    <button class="item-button rollable"
-                                        data-roll="@items.{{slugify item.name}}.attributes.{{key}}.{{groupedKey}}.value" data-label="{{ itemGroupedAttr.label }}"
-                                        title="{{itemGroupedAttr.value}}">{{itemGroupedAttr.label}}</button>
-                                    {{/if}}
-                                {{/if}}
-                            {{/each}}
-                        {{/if}}
-                        {{/each}}
-						{{#each item.Talents}}
-						<label>
-						<input type="checkbox" data-id="{{item._id}}" class="talent-checkbox" data-type="{{this.name}}" {{checked this.value }}>
-						</label><br>
-						{{/each}}
-                    </div>
-                    <div class="bond-power-controls">
-                        <a class="bond-power-control" title="{{ localize "SIMPLE.ItemEdit" }}" data-action="edit"><i class="fas fa-edit"></i></a>
-                        <a class="bond-power-control" title="{{ localize "SIMPLE.ItemDelete" }}" data-action="delete"><i class="fas fa-trash"></i></a>
-                    </div>
-                </li>
-                {{/if}}
-				{{/each}}
-            </ol>
-            <p>
-                <a class="bond-power-control" title="{{ localize "SIMPLE.ItemCreate" }}" data-action="create"><i class="fas fa-plus"></i> {{ localize "SIMPLE.ItemCreate" }}</a>
-            </p>
-		
-		
-		</div>
-		</section>
-		</section>
-		</div>
+<table class="ficha-tabla">
+    <tbody><tr>
+            <td colspan="2" class="ficha-subtitulo">
+                <p><strong>FÍSICO</strong></p>
+            </td>
+            <td colspan="2" class="ficha-subtitulo">
+                <p><strong>EMOCIONALES</strong></p>
+            </td>
+</tr><tr>
+            <td class="ficha-celda">
+                <p>ESTAMINA</p>
+            </td>
+            <td class="ficha-celda">
+                <p>0</p>
+            </td>
+            <td class="ficha-celda">
+                <p>COMPOSTURA</p>
+            </td>
+            <td class="ficha-celda">
+                <p>0</p>
+            </td>
+</tr><tr>
+            <td class="ficha-celda">
+                <p>AGUANTE</p>
+            </td>
+            <td class="ficha-celda">
+                <p>0</p>
+            </td>
+            <td class="ficha-celda">
+                <p>AUTORIDAD</p>
+            </td>
+            <td class="ficha-celda">
+                <p>0</p>
+            </td>
+</tr><tr>
+            <td class="ficha-celda">
+                <p>ATLETISMO</p>
+            </td>
+            <td class="ficha-celda">
+                <p>2(2)</p>
+            </td>
+            <td class="ficha-celda">
+                <p>EMPATÍA</p>
+            </td>
+            <td class="ficha-celda">
+                <p>0</p>
+            </td>
+</tr><tr>
+            <td colspan="2" class="ficha-subtitulo">
+                <p>MOTOR</p>
+            </td>
+            <td colspan="2" class="ficha-subtitulo">
+                <p>INTELECTUAL</p>
+            </td>
+</tr><tr>
+            <td class="ficha-celda">
+                <p>Coordinación mano/ojo</p>
+            </td>
+            <td class="ficha-celda">
+                <p>0</p>
+            </td>
+            <td class="ficha-celda">
+                <p>Lógica</p>
+            </td>
+            <td class="ficha-celda">
+                <p>0</p>
+            </td>
+</tr><tr>
+            <td class="ficha-celda">
+                <p>Percepción</p>
+            </td>
+            <td class="ficha-celda">
+                <p>0</p>
+            </td>
+            <td class="ficha-celda">
+                <p>Cálculo visual</p>
+            </td>
+            <td class="ficha-celda">
+                <p>0</p>
+            </td>
+</tr><tr>
+            <td class="ficha-celda">
+                <p>Acrobacias</p>
+            </td>
+            <td class="ficha-celda">
+                <p>0</p>
+            </td>
+            <td class="ficha-celda">
+                <p>Academia</p>
+            </td>
+            <td class="ficha-celda">
+                <p>0</p>
+            </td>
+</tr><tr>
+            <td class="ficha-celda">
+                <p>Ocultación</p>
+            </td>
+            <td class="ficha-celda">
+                <p>0</p>
+            </td>
+            <td class="ficha-celda">
+                <p>-</p>
+            </td>
+            <td class="ficha-celda">
+                <p>0</p>
+            </td>
+</tr></tbody>
+</table>
         </div>
 		
 		{{!-- Traits & Relics Tab --}}
