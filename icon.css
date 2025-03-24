@@ -546,6 +546,12 @@ section.bond {
 	padding-bottom: 15px;
 }
 
+.CombatBar2 {
+	display: flex;
+	justify-content: space-evenly;
+	padding-bottom: 15px;
+}
+
 .worldbuilding .Wounds i#attributes-Wounds-4 {
 	color: red;
 }	
