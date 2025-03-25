@@ -827,7 +827,17 @@ class IconItemSheet extends SimpleItemSheet {
     return context;
   }
   }
-
+Hooks.on("renderActorSheet", (app, html, data) => {
+    html.find('input[name^="flags.Module-Nexo"]').change(event => {
+        event.preventDefault();
+        const input = event.target;
+        const value = input.value;
+        const path = input.name;
+        
+        // Guardar cambios en los flags del actor
+        app.actor.update({ [path]: value });
+    });
+});
 Actors.registerSheet("icon-player-sheet", IconPlayerSheet, { makeDefault: false });
 Actors.registerSheet("Module-Nexo", ICONSheet, { makeDefault: true });
 Actors.registerSheet("icon-camp-sheet", IconCampSheet, { makeDefault: false});
