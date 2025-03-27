@@ -93,6 +93,7 @@ class ICONSheet extends SimpleActorSheet {
 		item.isTrophy = item.flags?.['Module-Nexo']?.isTrophy || false
 		item.isRelic = item.flags?.['Module-Nexo']?.isRelic || false
 		item.isCampFixture = item.flags?.['Module-Nexo']?.isCampFixture || false
+	    	item.isDefense = item.flags?.['Module-Nexo']?.isDefense || false
 		try {
 		item.Talents = Object.entries(item.flags?.['Module-Nexo']).filter(t => t[0].includes('Talent')).map((t,i) => ({name:t[0],value:t[1]}))
 		}
