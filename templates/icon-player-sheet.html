@@ -364,24 +364,24 @@
         <div class="tab memories" data-group="primary" data-tab="memories">
     <div class="traitsrelics">
 	     <div class="traitheader">
-            <span>Defensa</span>
+            <span>Memorias</span>
         </div>
         <ol class="item-list">
             {{#each data.items as |item id|}}
-            {{#if item.isDefense }}
+            {{#if item.isMemories }}
             <li class="item flexrow" data-item-id="{{item._id}}">
                 <img src="{{item.img}}" title="{{item.name}}" width="24" height="24" />
                 <h4 class="item-name">{{item.name}}</h4>
-                <div class="defense-controls">
-                    <a class="defense-control" title="{{ localize "SIMPLE.ItemEdit" }}" data-action="edit"><i class="fas fa-edit"></i></a>
-                    <a class="defense-control" title="{{ localize "SIMPLE.ItemDelete" }}" data-action="delete"><i class="fas fa-trash"></i></a>
+                <div class="memories-controls">
+                    <a class="memories-control" title="{{ localize "SIMPLE.ItemEdit" }}" data-action="edit"><i class="fas fa-edit"></i></a>
+                    <a class="memories-control" title="{{ localize "SIMPLE.ItemDelete" }}" data-action="delete"><i class="fas fa-trash"></i></a>
                 </div>
             </li>
             {{/if}}
             {{/each}}
         </ol>
         <p>
-            <a class="defense-control" title="{{ localize "SIMPLE.ItemCreate" }}" data-action="create"><i class="fas fa-plus"></i> {{ localize "SIMPLE.ItemCreate" }}</a>
+            <a class="memories-control" title="{{ localize "SIMPLE.ItemCreate" }}" data-action="create"><i class="fas fa-plus"></i> {{ localize "SIMPLE.ItemCreate" }}</a>
         </p>
     </div>
 	</div>
