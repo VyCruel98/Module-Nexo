@@ -94,6 +94,7 @@ class ICONSheet extends SimpleActorSheet {
 		item.isRelic = item.flags?.['Module-Nexo']?.isRelic || false
 		item.isCampFixture = item.flags?.['Module-Nexo']?.isCampFixture || false
 	   	item.isDefense = item.flags?.['Module-Nexo']?.isDefense || false;
+	   	item.isEtherMenor = item.flags?.['Module-Nexo']?.isEtherMenor || false;	    
 		try {
 		item.Talents = Object.entries(item.flags?.['Module-Nexo']).filter(t => t[0].includes('Talent')).map((t,i) => ({name:t[0],value:t[1]}))
 		}
@@ -529,6 +530,31 @@ class ICONSheet extends SimpleActorSheet {
         return item.delete();
     }
   }
+	
+_onEtherMenor(event) {
+    event.preventDefault();
+	
+    // Obtain event data
+    const button = event.currentTarget;
+    const li = button.closest(".item");
+    const item = this.actor.items.get(li?.dataset.itemId);
+
+    // Handle different actions
+    switch ( button.dataset.action ) {
+      case "create":
+        const cls = getDocumentClass("Item");
+        return cls.create({
+			name: game.i18n.localize("SIMPLE.ItemNew"), 
+			type: "item", 
+			flags: { ['Module-Nexo'] : { isEtherMenor: true }} }, 
+			{parent: this.actor});
+      case "edit":
+        return item.sheet.render(true);
+      case "delete":
+        return item.delete();
+    }
+  }
+	
   
   activateListeners(html) {
     super.activateListeners(html);
@@ -539,6 +565,7 @@ class ICONSheet extends SimpleActorSheet {
 	html.find(".relic-control").click(this._onRelicControl.bind(this));
 	html.find(".camp-fixture-control").click(this._onCampControl.bind(this));
 	html.find(".defense-control").click(this._onDefenseControl.bind(this));
+	html.find(".EtherMenor-control").click(this._onEtherMenorControl.bind(this));
 	html.find("[data-item-id] img").click(event => this._onItemUse(event));
 	html.find('.click-to-set').click(ev => {
 		let stat = ev.currentTarget.dataset.stat
